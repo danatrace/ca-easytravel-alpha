@@ -204,18 +204,6 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_6_-_select_payment
-      displayName: ____________Performance Business KPIs Evaluation___________ (6 - Select Payment)
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
     - sli: kpi_responsetime_1_-_home_page
       displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
       pass:
@@ -242,6 +230,18 @@ objectives:
       key_sli: true
     - sli: kpi_responsetime_7_-_mock_creditcard_number
       displayName: ____________Performance Business KPIs Evaluation___________ (7 - Mock Creditcard Number)
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_6_-_select_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (6 - Select Payment)
       pass:
         - criteria:
             - <600
