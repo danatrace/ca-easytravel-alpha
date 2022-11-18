@@ -7,7 +7,6 @@ attachRules:
   - meTypes:
     - PROCESS_GROUP_INSTANCE
     tags:
-    - context: 
-      key: APPLICATION
+    - key: Application
       value: EasyTravel
 
