@@ -138,12 +138,6 @@ objectives:
             - <32400.000000
       weight: 1
       key_sli: false
-    - sli: throughput_(sum)
-      displayName: Throughput (sum)
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
     - sli: performance_business_kpis_evaluation_4_-_random_search
       displayName: Performance Business KPIs Evaluation (4 - Random Search)
       pass:
@@ -168,18 +162,6 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_3_-_login
-      displayName: Performance Business KPIs Evaluation (3 - Login)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000000.000000
-      weight: 1
-      key_sli: false
     - sli: performance_business_kpis_evaluation_5_-_select_journey
       displayName: Performance Business KPIs Evaluation (5 - Select Journey)
       pass:
@@ -192,8 +174,44 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600000.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000000.000000
+      weight: 1
+      key_sli: false
+    - sli: performance_business_kpis_evaluation_3_-_login
+      displayName: Performance Business KPIs Evaluation (3 - Login)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600000.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000000.000000
+      weight: 1
+      key_sli: false
     - sli: performance_business_kpis_evaluation_1_-_home_page
       displayName: Performance Business KPIs Evaluation (1 - Home Page)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600000.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000000.000000
+      weight: 1
+      key_sli: false
+    - sli: performance_business_kpis_evaluation_6_-_select_payment
+      displayName: Performance Business KPIs Evaluation (6 - Select Payment)
       pass:
         - criteria:
             - '>=0.000000'
@@ -228,28 +246,10 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000000.000000
-      weight: 1
-      key_sli: false
-    - sli: performance_business_kpis_evaluation_6_-_select_payment
-      displayName: Performance Business KPIs Evaluation (6 - Select Payment)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+    - sli: throughput_(sum)
+      displayName: Throughput (sum)
+      pass: []
+      warning: []
       weight: 1
       key_sli: false
 total_score:
