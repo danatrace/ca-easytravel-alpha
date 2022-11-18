@@ -5,7 +5,9 @@ dtCreds: dynatrace
 attachRules:
   tagRule:
   - meTypes:
-    - SERVICE
+    - PROCESS_GROUP_INSTANCE
     tags:
-    - context: CONTEXTLESS
-      key: classic-eval
+    - context: 
+      key: APPLICATION
+      value: EasyTravel
+
