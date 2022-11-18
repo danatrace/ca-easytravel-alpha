@@ -6,6 +6,7 @@ attachRules:
   tagRule:
   - meTypes:
     - PROCESS_GROUP_INSTANCE
+    - SERVICES
     tags:
     - context: CONTEXTLESS
       key: Application
