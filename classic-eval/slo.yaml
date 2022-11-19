@@ -174,8 +174,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_5_-_select_journey
-      displayName: Performance Business KPIs Evaluation (5 - Select Journey)
+    - sli: performance_business_kpis_evaluation_1_-_home_page
+      displayName: Performance Business KPIs Evaluation (1 - Home Page)
       pass:
         - criteria:
             - '>=0.000000'
@@ -186,8 +186,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_1_-_home_page
-      displayName: Performance Business KPIs Evaluation (1 - Home Page)
+    - sli: performance_business_kpis_evaluation_5_-_select_journey
+      displayName: Performance Business KPIs Evaluation (5 - Select Journey)
       pass:
         - criteria:
             - '>=0.000000'
@@ -210,8 +210,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
-      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
       pass:
         - criteria:
             - '>=0.000000'
@@ -222,8 +222,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: false
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
+      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
       pass:
         - criteria:
             - '>=0.000000'
