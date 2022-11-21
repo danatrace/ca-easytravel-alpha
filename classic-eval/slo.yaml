@@ -198,8 +198,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
-      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
+    - sli: performance_business_kpis_evaluation_8_-_submit_payment
+      displayName: Performance Business KPIs Evaluation (8 - Submit Payment)
       pass:
         - criteria:
             - '>=0.000000'
@@ -210,8 +210,8 @@ objectives:
             - <1000000.000000
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_8_-_submit_payment
-      displayName: Performance Business KPIs Evaluation (8 - Submit Payment)
+    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
+      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
       pass:
         - criteria:
             - '>=0.000000'
