@@ -46,6 +46,16 @@ objectives:
             - '>5000'
       weight: 1
       key_sli: true
+    - sli: performance_business_kpis_evaluation_3_-_login
+      displayName: Performance Business KPIs Evaluation (3 - Login)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
+      weight: 1
+      key_sli: true
     - sli: performance_business_kpis_evaluation_4_-_random_search
       displayName: Performance Business KPIs Evaluation (4 - Random Search)
       pass:
@@ -58,26 +68,6 @@ objectives:
       key_sli: true
     - sli: performance_business_kpis_evaluation_2_-_calculaterecommendations
       displayName: Performance Business KPIs Evaluation (2 - CalculateRecommendations)
-      pass:
-        - criteria:
-            - <1000
-      warning:
-        - criteria:
-            - '>600'
-      weight: 1
-      key_sli: true
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
-      pass:
-        - criteria:
-            - <1000
-      warning:
-        - criteria:
-            - '>600'
-      weight: 1
-      key_sli: true
-    - sli: performance_business_kpis_evaluation_3_-_login
-      displayName: Performance Business KPIs Evaluation (3 - Login)
       pass:
         - criteria:
             - <1000
@@ -116,6 +106,16 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
+      weight: 1
+      key_sli: true
     - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
       displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
       pass:
@@ -140,20 +140,20 @@ objectives:
       displayName: Backend services 90p
       pass:
         - criteria:
-            - <2000
+            - <200
       warning:
         - criteria:
-            - '>1500'
+            - '>150'
       weight: 2
       key_sli: true
     - sli: database_services_90p
       displayName: Database services 90p
       pass:
         - criteria:
-            - <2000
+            - <200
       warning:
         - criteria:
-            - '>1500'
+            - '>150'
       weight: 2
       key_sli: true
     - sli: traces_io_time_(sum)
@@ -210,10 +210,10 @@ objectives:
       displayName: FrontEnd services 90p
       pass:
         - criteria:
-            - <2000
+            - <200
       warning:
         - criteria:
-            - '>1500'
+            - '>150'
       weight: 2
       key_sli: true
 total_score:
