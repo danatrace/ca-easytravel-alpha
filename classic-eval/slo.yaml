@@ -66,8 +66,8 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_3_-_login
-      displayName: Performance Business KPIs Evaluation (3 - Login)
+    - sli: performance_business_kpis_evaluation_5_-_select_journey
+      displayName: Performance Business KPIs Evaluation (5 - Select Journey)
       pass:
         - criteria:
             - <1000
@@ -76,8 +76,18 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_5_-_select_journey
-      displayName: Performance Business KPIs Evaluation (5 - Select Journey)
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
+      weight: 1
+      key_sli: true
+    - sli: performance_business_kpis_evaluation_3_-_login
+      displayName: Performance Business KPIs Evaluation (3 - Login)
       pass:
         - criteria:
             - <1000
@@ -108,16 +118,6 @@ objectives:
       key_sli: true
     - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
       displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
-      pass:
-        - criteria:
-            - <1000
-      warning:
-        - criteria:
-            - '>600'
-      weight: 1
-      key_sli: true
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
       pass:
         - criteria:
             - <1000
