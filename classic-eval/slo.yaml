@@ -6,256 +6,216 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: backend_services_90p
-      displayName: Backend services 90p
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <1500000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <2000000.000000
-      weight: 2
-      key_sli: true
     - sli: frontend_services_90p
       displayName: FrontEnd services 90p
       pass:
         - criteria:
-            - '>=0.000000'
-            - <1500000.000000
+            - <2000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <2000000.000000
-      weight: 2
-      key_sli: true
-    - sli: database_services_90p
-      displayName: Database services 90p
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <1500000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <2000000.000000
+            - '>1500'
       weight: 2
       key_sli: true
     - sli: process_memory_allocation
       displayName: Process Memory Allocation
       pass:
         - criteria:
-            - '>=0.000000'
-            - <13000000000.000000
+            - <20
       warning:
         - criteria:
-            - '>=0.000000'
-            - <20000000000.000000
-      weight: 1
-      key_sli: false
-    - sli: process_cpu_usage
-      displayName: Process CPU Usage
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <2.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <5.000000
+            - '>13'
       weight: 1
       key_sli: false
     - sli: traces_cpu_time_(sum)
       displayName: Traces CPU time (sum)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <150000000.000000
+            - <1.65
       warning:
         - criteria:
-            - '>=0.000000'
-            - <165000000.000000
+            - '>1.5'
       weight: 1
       key_sli: false
     - sli: inter-tier_calls
       displayName: Inter-Tier Calls
       pass:
         - criteria:
-            - '>=0.000000'
-            - <45000.000000
+            - <49500
       warning:
         - criteria:
-            - '>=0.000000'
-            - <49500.000000
-      weight: 1
-      key_sli: false
-    - sli: traces_lock_time_(sum)
-      displayName: Traces Lock time (sum)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <100000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <120000.000000
-      weight: 1
-      key_sli: false
-    - sli: traces_io_time_(sum)
-      displayName: Traces IO time (sum)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <2700000000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <3000000000.000000
+            - '>45000'
       weight: 1
       key_sli: false
     - sli: failures_(sum)
       displayName: Failures (sum)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <11.000000
+            - <16
       warning:
         - criteria:
-            - '>=0.000000'
-            - <16.000000
+            - '>11'
       weight: 5
       key_sli: true
     - sli: database_calls
       displayName: Database Calls
       pass:
         - criteria:
-            - '>=0.000000'
-            - <27000.000000
+            - <32400
       warning:
         - criteria:
-            - '>=0.000000'
-            - <32400.000000
+            - '>27000'
       weight: 2
       key_sli: false
+    - sli: throughput_(sum)
+      displayName: Throughput (sum)
+      pass:
+        - criteria:
+            - <5000
+      warning:
+        - criteria:
+            - '>5000'
+      weight: 1
+      key_sli: true
     - sli: performance_business_kpis_evaluation_3_-_login
       displayName: Performance Business KPIs Evaluation (3 - Login)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_4_-_random_search
       displayName: Performance Business KPIs Evaluation (4 - Random Search)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_2_-_calculaterecommendations
       displayName: Performance Business KPIs Evaluation (2 - CalculateRecommendations)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_1_-_home_page
       displayName: Performance Business KPIs Evaluation (1 - Home Page)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_5_-_select_journey
       displayName: Performance Business KPIs Evaluation (5 - Select Journey)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_8_-_submit_payment
       displayName: Performance Business KPIs Evaluation (8 - Submit Payment)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
-      weight: 1
-      key_sli: true
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
       displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
+      weight: 1
+      key_sli: true
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
       weight: 1
       key_sli: true
     - sli: performance_business_kpis_evaluation_6_-_select_payment
       displayName: Performance Business KPIs Evaluation (6 - Select Payment)
       pass:
         - criteria:
-            - '>=0.000000'
-            - <600000.000000
+            - <1000
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - '>600'
       weight: 1
       key_sli: true
-    - sli: throughput_(sum)
-      displayName: Throughput (sum)
+    - sli: backend_services_90p
+      displayName: Backend services 90p
       pass:
         - criteria:
-            - '>=6000.000000'
+            - <2000
       warning:
         - criteria:
-            - '>=5000.000000'
-      weight: 1
+            - '>1500'
+      weight: 2
       key_sli: true
+    - sli: database_services_90p
+      displayName: Database services 90p
+      pass:
+        - criteria:
+            - <2000
+      warning:
+        - criteria:
+            - '>1500'
+      weight: 2
+      key_sli: true
+    - sli: traces_io_time_(sum)
+      displayName: Traces IO time (sum)
+      pass:
+        - criteria:
+            - <50
+      warning:
+        - criteria:
+            - '>45'
+      weight: 1
+      key_sli: false
+    - sli: traces_lock_time_(sum)
+      displayName: Traces Lock time (sum)
+      pass:
+        - criteria:
+            - <2
+      warning:
+        - criteria:
+            - '>1.6'
+      weight: 1
+      key_sli: false
+    - sli: process_cpu_usage
+      displayName: Process CPU Usage
+      pass:
+        - criteria:
+            - <5
+      warning:
+        - criteria:
+            - '>2'
+      weight: 1
+      key_sli: false
 total_score:
     pass: 85%
     warning: 80%
