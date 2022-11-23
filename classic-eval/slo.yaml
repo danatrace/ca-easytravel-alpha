@@ -16,16 +16,6 @@ objectives:
             - '>45000'
       weight: 1
       key_sli: false
-    - sli: failures_(sum)
-      displayName: Failures (sum)
-      pass:
-        - criteria:
-            - <16
-      warning:
-        - criteria:
-            - '>11'
-      weight: 5
-      key_sli: true
     - sli: database_calls
       displayName: Database Calls
       pass:
@@ -40,140 +30,140 @@ objectives:
       displayName: Throughput (sum)
       pass:
         - criteria:
-            - <5000
+            - <=5000
       warning:
         - criteria:
-            - '>5000'
+            - <=5500
       weight: 1
       key_sli: true
     - sli: kpi_4_-_random_search
       displayName: KPI (4 - Random Search)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_2_-_calculaterecommendations
       displayName: KPI (2 - CalculateRecommendations)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_3_-_login
       displayName: KPI (3 - Login)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_1_-_home_page
       displayName: KPI (1 - Home Page)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_5_-_select_journey
       displayName: KPI (5 - Select Journey)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_8_-_submit_payment
       displayName: KPI (8 - Submit Payment)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_7_-_mock_creditcard_number
       displayName: KPI (7 - Mock Creditcard Number)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_9_-_finish_payment
       displayName: KPI (9 - Finish Payment)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: kpi_6_-_select_payment
       displayName: KPI (6 - Select Payment)
       pass:
         - criteria:
-            - <1000
+            - <=600
       warning:
         - criteria:
-            - '>600'
+            - <=1000
       weight: 1
       key_sli: true
     - sli: backend_services_90p
       displayName: Backend services 90p
       pass:
         - criteria:
-            - <200
+            - <=150
       warning:
         - criteria:
-            - '>150'
+            - <=200
       weight: 2
       key_sli: true
     - sli: database_services_90p
       displayName: Database services 90p
       pass:
         - criteria:
-            - <200
+            - <=150
       warning:
         - criteria:
-            - '>150'
+            - <=200
       weight: 2
       key_sli: true
     - sli: traces_io_time_(sum)
       displayName: Traces IO time (sum)
       pass:
         - criteria:
-            - <50
+            - <=45
       warning:
         - criteria:
-            - '>45'
+            - <=50
       weight: 1
       key_sli: false
     - sli: traces_lock_time_(sum)
       displayName: Traces Lock time (sum)
       pass:
         - criteria:
-            - <2
+            - <=1.6
       warning:
         - criteria:
-            - '>1.6'
+            - <=2
       weight: 1
       key_sli: false
     - sli: process_cpu_usage
@@ -200,21 +190,31 @@ objectives:
       displayName: Traces CPU time (sum)
       pass:
         - criteria:
-            - <1.65
+            - <=1.50
       warning:
         - criteria:
-            - '>1.5'
+            - <=1.65
       weight: 1
       key_sli: false
     - sli: frontend_services_90p
       displayName: FrontEnd services 90p
       pass:
         - criteria:
-            - <200
+            - <=150
       warning:
         - criteria:
-            - '>150'
+            - <=200
       weight: 2
+      key_sli: true
+    - sli: failures_(sum)
+      displayName: Failures (sum)
+      pass:
+        - criteria:
+            - <11
+      warning:
+        - criteria:
+            - '>11'
+      weight: 5
       key_sli: true
 total_score:
     pass: 85%
