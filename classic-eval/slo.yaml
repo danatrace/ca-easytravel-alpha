@@ -26,106 +26,6 @@ objectives:
             - '>27000'
       weight: 2
       key_sli: false
-    - sli: throughput_(sum)
-      displayName: Throughput (sum)
-      pass:
-        - criteria:
-            - <=5000
-      warning:
-        - criteria:
-            - <=5500
-      weight: 1
-      key_sli: true
-    - sli: kpi_8_-_submit_payment
-      displayName: KPI (8 - Submit Payment)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_9_-_finish_payment
-      displayName: KPI (9 - Finish Payment)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_4_-_random_search
-      displayName: KPI (4 - Random Search)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_2_-_calculaterecommendations
-      displayName: KPI (2 - CalculateRecommendations)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_3_-_login
-      displayName: KPI (3 - Login)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_5_-_select_journey
-      displayName: KPI (5 - Select Journey)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_1_-_home_page
-      displayName: KPI (1 - Home Page)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_7_-_mock_creditcard_number
-      displayName: KPI (7 - Mock Creditcard Number)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_6_-_select_payment
-      displayName: KPI (6 - Select Payment)
-      pass:
-        - criteria:
-            - <=600
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
     - sli: traces_io_time_(sum)
       displayName: Traces IO time (sum)
       pass:
@@ -186,8 +86,8 @@ objectives:
             - <=16
       weight: 5
       key_sli: true
-    - sli: backend_services_90p
-      displayName: Backend services 90p
+    - sli: frontend_services_90p
+      displayName: FrontEnd services 90p
       pass:
         - criteria:
             - '>=0.000000'
@@ -198,8 +98,8 @@ objectives:
             - <2000.000000
       weight: 2
       key_sli: true
-    - sli: frontend_services_90p
-      displayName: FrontEnd services 90p
+    - sli: backend_services_90p
+      displayName: Backend services 90p
       pass:
         - criteria:
             - '>=0.000000'
@@ -215,12 +115,130 @@ objectives:
       pass:
         - criteria:
             - '>=0.000000'
-            - <150.000000
+            - <3.000000
       warning:
         - criteria:
             - '>=0.000000'
-            - <200.000000
+            - <5.000000
       weight: 2
+      key_sli: true
+    - sli: kpi_8_-_submit_payment
+      displayName: KPI (8 - Submit Payment)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_9_-_finish_payment
+      displayName: KPI (9 - Finish Payment)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_4_-_random_search
+      displayName: KPI (4 - Random Search)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_2_-_calculaterecommendations
+      displayName: KPI (2 - CalculateRecommendations)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_3_-_login
+      displayName: KPI (3 - Login)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_5_-_select_journey
+      displayName: KPI (5 - Select Journey)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_1_-_home_page
+      displayName: KPI (1 - Home Page)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_7_-_mock_creditcard_number
+      displayName: KPI (7 - Mock Creditcard Number)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: kpi_6_-_select_payment
+      displayName: KPI (6 - Select Payment)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
+    - sli: throughput_(sum)
+      displayName: Throughput (sum)
+      pass:
+        - criteria:
+            - '>=5500.000000'
+      warning:
+        - criteria:
+            - '>=5000.000000'
+      weight: 1
       key_sli: true
 total_score:
     pass: 85%
