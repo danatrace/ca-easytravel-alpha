@@ -66,16 +66,6 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: kpi_9_-_finish_payment
-      displayName: KPI (9 - Finish Payment)
-      pass:
-        - criteria:
-            - <1000
-      warning:
-        - criteria:
-            - '>600'
-      weight: 1
-      key_sli: true
     - sli: kpi_3_-_login
       displayName: KPI (3 - Login)
       pass:
@@ -118,6 +108,16 @@ objectives:
       key_sli: true
     - sli: kpi_7_-_mock_creditcard_number
       displayName: KPI (7 - Mock Creditcard Number)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
+      weight: 1
+      key_sli: true
+    - sli: kpi_9_-_finish_payment
+      displayName: KPI (9 - Finish Payment)
       pass:
         - criteria:
             - <1000
