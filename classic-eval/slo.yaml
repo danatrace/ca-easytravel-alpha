@@ -126,26 +126,6 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: backend_services_90p
-      displayName: Backend services 90p
-      pass:
-        - criteria:
-            - <=150
-      warning:
-        - criteria:
-            - <=200
-      weight: 2
-      key_sli: true
-    - sli: database_services_90p
-      displayName: Database services 90p
-      pass:
-        - criteria:
-            - <=150
-      warning:
-        - criteria:
-            - <=200
-      weight: 2
-      key_sli: true
     - sli: traces_io_time_(sum)
       displayName: Traces IO time (sum)
       pass:
@@ -196,16 +176,6 @@ objectives:
             - <=1.65
       weight: 1
       key_sli: false
-    - sli: frontend_services_90p
-      displayName: FrontEnd services 90p
-      pass:
-        - criteria:
-            - <=150
-      warning:
-        - criteria:
-            - <=200
-      weight: 2
-      key_sli: true
     - sli: failures_(sum)
       displayName: Failures (sum)
       pass:
@@ -215,6 +185,42 @@ objectives:
         - criteria:
             - <=16
       weight: 5
+      key_sli: true
+    - sli: backend_services_90p
+      displayName: Backend services 90p
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <1500.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <2000.000000
+      weight: 2
+      key_sli: true
+    - sli: frontend_services_90p
+      displayName: FrontEnd services 90p
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <1500.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <2000.000000
+      weight: 2
+      key_sli: true
+    - sli: database_services_90p
+      displayName: Database services 90p
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <150.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <200.000000
+      weight: 2
       key_sli: true
 total_score:
     pass: 85%
