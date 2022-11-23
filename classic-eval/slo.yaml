@@ -6,56 +6,40 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: inter-tier_calls
-      displayName: Inter-Tier Calls
-      pass:
-        - criteria:
-            - <49500
-      warning:
-        - criteria:
-            - '>45000'
-      weight: 1
-      key_sli: false
     - sli: database_calls
       displayName: Database Calls
       pass:
         - criteria:
-            - <32400
+            - '>=0.000000'
+            - <27000.000000
       warning:
         - criteria:
-            - '>27000'
+            - '>=0.000000'
+            - <32400.000000
       weight: 2
-      key_sli: false
-    - sli: process_cpu_usage
-      displayName: Process CPU Usage
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <2.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <5.000000
-      weight: 1
       key_sli: false
     - sli: process_memory_allocation
       displayName: Process Memory Allocation
       pass:
         - criteria:
-            - <20
+            - '>=0.000000'
+            - <13.000000
       warning:
         - criteria:
-            - '>13'
+            - '>=0.000000'
+            - <20.000000
       weight: 1
       key_sli: false
     - sli: failures_(sum)
       displayName: Failures (sum)
       pass:
         - criteria:
-            - <=11
+            - '>=0.000000'
+            - <11.000000
       warning:
         - criteria:
-            - <=16
+            - '>=0.000000'
+            - <16.000000
       weight: 5
       key_sli: true
     - sli: frontend_services_90p
@@ -246,6 +230,30 @@ objectives:
         - criteria:
             - '>=0.000000'
             - <2.000000
+      weight: 1
+      key_sli: false
+    - sli: process_cpu_usage
+      displayName: Process CPU Usage
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <3.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <5.000000
+      weight: 1
+      key_sli: false
+    - sli: inter-tier_calls
+      displayName: Inter-Tier Calls
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <30.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <48.000000
       weight: 1
       key_sli: false
 total_score:
