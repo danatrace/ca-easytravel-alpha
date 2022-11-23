@@ -210,10 +210,10 @@ objectives:
       displayName: Failures (sum)
       pass:
         - criteria:
-            - <11
+            - <=11
       warning:
         - criteria:
-            - '>11'
+            - <=16
       weight: 5
       key_sli: true
 total_score:
