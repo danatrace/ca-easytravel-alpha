@@ -26,26 +26,6 @@ objectives:
             - '>27000'
       weight: 2
       key_sli: false
-    - sli: traces_io_time_(sum)
-      displayName: Traces IO time (sum)
-      pass:
-        - criteria:
-            - <=45
-      warning:
-        - criteria:
-            - <=50
-      weight: 1
-      key_sli: false
-    - sli: traces_lock_time_(sum)
-      displayName: Traces Lock time (sum)
-      pass:
-        - criteria:
-            - <=1.6
-      warning:
-        - criteria:
-            - <=2
-      weight: 1
-      key_sli: false
     - sli: process_cpu_usage
       displayName: Process CPU Usage
       pass:
@@ -64,16 +44,6 @@ objectives:
       warning:
         - criteria:
             - '>13'
-      weight: 1
-      key_sli: false
-    - sli: traces_cpu_time_(sum)
-      displayName: Traces CPU time (sum)
-      pass:
-        - criteria:
-            - <=1.50
-      warning:
-        - criteria:
-            - <=1.65
       weight: 1
       key_sli: false
     - sli: failures_(sum)
@@ -240,6 +210,42 @@ objectives:
             - '>=5000.000000'
       weight: 1
       key_sli: true
+    - sli: traces_io_time_(sum)
+      displayName: Traces IO time (sum)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <4000.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <5000.000000
+      weight: 1
+      key_sli: false
+    - sli: traces_cpu_time_(sum)
+      displayName: Traces CPU time (sum)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <200.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <250.000000
+      weight: 1
+      key_sli: false
+    - sli: traces_lock_time_(sum)
+      displayName: Traces Lock time (sum)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <1.500000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <2.000000
+      weight: 1
+      key_sli: false
 total_score:
     pass: 85%
     warning: 80%
