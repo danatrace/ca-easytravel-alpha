@@ -30,10 +30,12 @@ objectives:
       displayName: Process CPU Usage
       pass:
         - criteria:
-            - <5
+            - '>=0.000000'
+            - <2.000000
       warning:
         - criteria:
-            - '>2'
+            - '>=0.000000'
+            - <5.000000
       weight: 1
       key_sli: false
     - sli: process_memory_allocation
