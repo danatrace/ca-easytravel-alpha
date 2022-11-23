@@ -46,16 +46,6 @@ objectives:
             - '>5000'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_3_-_login
-      displayName: Performance Business KPIs Evaluation (3 - Login)
-      pass:
-        - criteria:
-            - <1000
-      warning:
-        - criteria:
-            - '>600'
-      weight: 1
-      key_sli: true
     - sli: performance_business_kpis_evaluation_4_-_random_search
       displayName: Performance Business KPIs Evaluation (4 - Random Search)
       pass:
@@ -76,8 +66,8 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_1_-_home_page
-      displayName: Performance Business KPIs Evaluation (1 - Home Page)
+    - sli: performance_business_kpis_evaluation_3_-_login
+      displayName: Performance Business KPIs Evaluation (3 - Login)
       pass:
         - criteria:
             - <1000
@@ -96,6 +86,16 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
+    - sli: performance_business_kpis_evaluation_1_-_home_page
+      displayName: Performance Business KPIs Evaluation (1 - Home Page)
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - '>600'
+      weight: 1
+      key_sli: true
     - sli: performance_business_kpis_evaluation_8_-_submit_payment
       displayName: Performance Business KPIs Evaluation (8 - Submit Payment)
       pass:
@@ -106,8 +106,8 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_9_-_finish_payment
-      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
+    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
+      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
       pass:
         - criteria:
             - <1000
@@ -116,8 +116,8 @@ objectives:
             - '>600'
       weight: 1
       key_sli: true
-    - sli: performance_business_kpis_evaluation_7_-_mock_creditcard_number
-      displayName: Performance Business KPIs Evaluation (7 - Mock Creditcard Number)
+    - sli: performance_business_kpis_evaluation_9_-_finish_payment
+      displayName: Performance Business KPIs Evaluation (9 - Finish Payment)
       pass:
         - criteria:
             - <1000
