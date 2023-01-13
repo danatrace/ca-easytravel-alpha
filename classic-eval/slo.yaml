@@ -160,6 +160,18 @@ objectives:
             - <1000.000000
       weight: 1
       key_sli: true
+    - sli: kpi_1_-_home_page
+      displayName: KPI (1 - Home Page)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
     - sli: kpi_5_-_select_journey
       displayName: KPI (5 - Select Journey)
       pass:
@@ -174,18 +186,6 @@ objectives:
       key_sli: true
     - sli: kpi_7_-_mock_creditcard_number
       displayName: KPI (7 - Mock Creditcard Number)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000.000000
-      weight: 1
-      key_sli: true
-    - sli: kpi_1_-_home_page
-      displayName: KPI (1 - Home Page)
       pass:
         - criteria:
             - '>=0.000000'
