@@ -112,6 +112,18 @@ objectives:
             - <32400.000000
       weight: 2
       key_sli: false
+    - sli: kpi_3_-_login
+      displayName: KPI (3 - Login)
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <600.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000.000000
+      weight: 1
+      key_sli: true
     - sli: kpi_8_-_submit_payment
       displayName: KPI (8 - Submit Payment)
       pass:
@@ -138,18 +150,6 @@ objectives:
       key_sli: true
     - sli: kpi_4_-_random_search
       displayName: KPI (4 - Random Search)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <600.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000.000000
-      weight: 1
-      key_sli: true
-    - sli: kpi_3_-_login
-      displayName: KPI (3 - Login)
       pass:
         - criteria:
             - '>=0.000000'
