@@ -136,8 +136,8 @@ objectives:
             - <1000.000000
       weight: 1
       key_sli: true
-    - sli: kpi_2_-_calculaterecommendations
-      displayName: KPI (2 - CalculateRecommendations)
+    - sli: kpi_6_-_select_payment
+      displayName: KPI (6 - Select Payment)
       pass:
         - criteria:
             - '>=0.000000'
@@ -148,8 +148,8 @@ objectives:
             - <1000.000000
       weight: 1
       key_sli: true
-    - sli: kpi_6_-_select_payment
-      displayName: KPI (6 - Select Payment)
+    - sli: kpi_2_-_calculaterecommendations
+      displayName: KPI (2 - CalculateRecommendations)
       pass:
         - criteria:
             - '>=0.000000'
